@@ -10,3 +10,6 @@ class Carros(models.Model):
 class Usuarios(models.Model):
     email = models.CharField(max_length=100)
     senha = models.CharField(max_length=100)
+
+class Sobre(models.Model):
+    texto = models.CharField(max_length=99999)

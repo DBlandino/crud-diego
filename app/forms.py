@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from app.models import Carros, Usuarios
+from app.models import Carros, Usuarios, Sobre
 
 
 # Create the form class.
@@ -13,3 +13,9 @@ class UsuariosForm(ModelForm):
     class Meta:
         model = Usuarios
         fields = ['email', 'senha']
+
+
+class SobreForm(ModelForm):
+    class Meta:
+        model = Sobre
+        fields = ['texto']

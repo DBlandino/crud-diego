@@ -21,15 +21,7 @@
     </div>
 
     <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/users" class="btn btn-success">Ver Usuários</a>
-    </div>
-
-    <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/sobre" class="btn btn-success">Sobre</a>
-    </div>
-
-    <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/logout" class="btn btn-danger">Logout</a>
+        <a href="/" class="btn btn-success">Ver Carros</a>
     </div>
 
     <div class="col-8 m-auto pt-3 pb-2 text-center">
@@ -42,9 +34,8 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Modelo</th>
-      <th scope="col">Marca</th>
-      <th scope="col">Ano</th>
+      <th scope="col">Email</th>
+      <th scope="col">Senha</th>
       <th scope="col">Ações</th>
     </tr>
   </thead>
@@ -53,14 +44,11 @@
       {% for dbs in db %}
        <tr>
           <th>{{dbs.id}}</th>
-          <td>{{dbs.modelo}}</td>
-          <td>{{dbs.marca}}</td>
-          <td>{{dbs.ano}}</td>
+          <td>{{dbs.email}}</td>
+          <td>{{dbs.senha}}</td>
           <td>
-              <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
-              <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-              <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
-          </td>
+            <a href="/deleteuser/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+        </td>
         </tr>
       {% endfor %}
   {% endif %}
