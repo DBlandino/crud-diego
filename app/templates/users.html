@@ -24,6 +24,14 @@
         <a href="/" class="btn btn-success">Ver Carros</a>
     </div>
 
+     <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/sobre" class="btn btn-success">Sobre</a>
+    </div>
+
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+
     <div class="col-8 m-auto pt-3 pb-2 text-center">
         <form method="get">
             <input type="text" id="search" name="search" class="form-control" placeholder="Buscar...">
@@ -45,7 +53,7 @@
        <tr>
           <th>{{dbs.id}}</th>
           <td>{{dbs.email}}</td>
-          <td>{{dbs.senha}}</td>
+          <td>***</td>
           <td>
             <a href="/deleteuser/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
         </td>

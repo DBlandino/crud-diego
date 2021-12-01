@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, CharField, PasswordInput
 from app.models import Carros, Usuarios, Sobre
 
 
@@ -10,6 +10,7 @@ class CarrosForm(ModelForm):
 
 
 class UsuariosForm(ModelForm):
+    senha = CharField(widget=PasswordInput())
     class Meta:
         model = Usuarios
         fields = ['email', 'senha']
