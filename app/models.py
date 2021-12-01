@@ -5,3 +5,8 @@ class Carros(models.Model):
     modelo = models.CharField(max_length=150)
     marca = models.CharField(max_length=100)
     ano = models.IntegerField()
+
+
+class Usuarios(models.Model):
+    email = models.CharField(max_length=100)
+    senha = models.CharField(max_length=100)

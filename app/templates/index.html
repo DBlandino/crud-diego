@@ -13,7 +13,11 @@
     </div>
 
     <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/form" class="btn btn-success">Adicionar</a>
+        <a href="/form" class="btn btn-success">Cadastrar Veículo</a>
+    </div>
+
+     <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/cadastro" class="btn btn-success">Cadastrar Usuário</a>
     </div>
 
     <div class="col-8 m-auto pt-3 pb-2 text-center">
@@ -33,19 +37,21 @@
     </tr>
   </thead>
   <tbody>
-  {% for dbs in db %}
-   <tr>
-      <th>{{dbs.id}}</th>
-      <td>{{dbs.modelo}}</td>
-      <td>{{dbs.marca}}</td>
-      <td>{{dbs.ano}}</td>
-      <td>
-          <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
-          <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-          <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
-      </td>
-    </tr>
-  {% endfor %}
+  {% if error %} <span>{{ error }}</span> {% else %}
+      {% for dbs in db %}
+       <tr>
+          <th>{{dbs.id}}</th>
+          <td>{{dbs.modelo}}</td>
+          <td>{{dbs.marca}}</td>
+          <td>{{dbs.ano}}</td>
+          <td>
+              <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+              <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+              <a href="/delete/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+          </td>
+        </tr>
+      {% endfor %}
+  {% endif %}
 
   </tbody>
 </table>
